@@ -50,7 +50,7 @@ class EmailTokenObtainPairSerializer(TokenObtainPairSerializer):
     token_class = FilledRefreshToken
 
 
-class UserSerializer(serializers.ModelSerializer):
+class OneUserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ['first_name', 'last_name', 'email']

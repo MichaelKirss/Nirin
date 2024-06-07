@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 PROJECT_APPS = [
     'user',
+    'airports',
 ]
 INSTALLED_APPS = [
     'app',
@@ -51,7 +52,7 @@ INSTALLED_APPS = [
     'drf_spectacular',
     'drf_spectacular_sidecar',
     'drf_standardized_errors',
-    'rest_framework_swagger',
+    #'rest_framework_swagger',
     *PROJECT_APPS,
 ]
 

@@ -10,6 +10,7 @@ from rest_framework.versioning import URLPathVersioning
 
 app_urls = [
     path('', include('user.api.urls')),
+    path('', include('airports.api.urls'))
 ]
 
 api_urls = [

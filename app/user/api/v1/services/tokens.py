@@ -9,6 +9,5 @@ class FilledRefreshToken(RefreshToken):
         token: RefreshToken = super().for_user(user)
         token['username'] = user.username
         token['email'] = user.email
-        token['role'] = user.role
 
         return token

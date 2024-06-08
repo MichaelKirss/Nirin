@@ -1,0 +1,22 @@
+.home {
+  min-height: 100vh;
+  background: url("../images/homepage.png") no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.content {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 50px;
+}
+
+.sections {
+  width: 100%;
+}

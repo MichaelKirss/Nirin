@@ -21,7 +21,3 @@ class ServicesSerializer(ModelSerializer):
     class Meta:
         model = Services
         fields = ('id', 'title',  'description', 'kind_service', 'price', 'airport')
-
-
-
-

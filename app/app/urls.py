@@ -7,6 +7,8 @@ from drf_spectacular.views import (
     SpectacularSwaggerView,
 )
 from rest_framework.versioning import URLPathVersioning
+from django.conf import settings
+from django.conf.urls.static import static
 
 app_urls = [
     path('', include('user.api.urls')),
@@ -30,4 +32,8 @@ urlpatterns = [
     path('', include(swagger_urls)),
     path('', include(api_urls)),
     path('admin/', admin.site.urls),
+    path('', include('viewer.urls'))
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

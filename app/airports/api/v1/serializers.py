@@ -21,3 +21,21 @@ class ServicesSerializer(ModelSerializer):
     class Meta:
         model = Services
         fields = ('id', 'title',  'description', 'kind_service', 'price', 'airport')
+
+
+class AirportSearchSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Airport
+        fields = '__all__'
+
+
+class AirportDetailSerializer(serializers.ModelSerializer):
+    services = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Airport
+        fields = ('id', 'title', 'code_iata', 'code_icao', 'city', 'country', 'services')
+
+    def get_services(self, obj):
+        services = Services.objects.filter(airport=obj)
+        return ServicesSerializer(services, many=True).data

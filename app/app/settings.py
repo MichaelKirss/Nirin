@@ -125,7 +125,8 @@ REST_FRAMEWORK = {
 }
 DRF_STANDARDIZED_ERRORS = {'ENABLE_IN_DEBUG_FOR_UNHANDLED_EXCEPTIONS': True}
 
-CSRF_TRUSTED_ORIGINS = ['http://0.0.0.0:8080', 'http://127.0.0.1:8080', 'https://45.131.41.66:8443']
+CSRF_TRUSTED_ORIGINS = ['http://0.0.0.0:8080', 'http://127.0.0.1:8080', 'https://45.131.41.66:8443',
+                        'http://localhost:5174']
 CORS_ORIGIN_ALLOW_ALL = True
 
 SIMPLE_JWT = {

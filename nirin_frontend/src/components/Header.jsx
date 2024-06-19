@@ -1,0 +1,55 @@
+import { HashLink} from "react-router-hash-link";
+import './header.css'
+
+function Header() {
+  return (
+    <header className="App-header">
+      <div className="logo">
+        <h1>MEET AND GREET</h1>
+      </div>
+      <nav>
+        <ul className="nav-links">
+          <li>
+            <HashLink smooth to="/#home" className="a">HOME</HashLink>
+          </li>
+
+          <li>
+            <HashLink smooth to="/#airport">
+              AIRPORTS
+            </HashLink>
+          </li>
+
+          <li>
+            <HashLink smooth to="/#services">
+              SERVICES
+            </HashLink>
+          </li>          
+          <li>
+            <HashLink smooth to="/#contacts">
+              CONTACTS
+            </HashLink>
+          </li>          
+        </ul>
+      </nav>
+      <div className="language-dropdown">
+        <svg
+          className="custom-arrow"
+          width="15"
+          height="8"
+          viewBox="0 0 17 10"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M1 1L8 9L16 1" stroke="black" strokeLinecap="round" fill="#b78d5f" />
+        </svg>
+        <select>
+            <option value="en">EN</option>
+            <option value="ru">RU</option>
+          </select> 
+      </div>
+      <button className="sign-in-button">SIGN IN / JOIN NOW</button>
+    </header>
+  );
+}
+
+export default Header;

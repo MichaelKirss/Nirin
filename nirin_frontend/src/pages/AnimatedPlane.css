@@ -1,0 +1,51 @@
+.dark-background {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0b1528;
+  position: relative;
+}
+.animated-title {
+  font-family: "Cormorant", serif;
+  font-size: 48px;
+  font-weight: bold;
+  position: absolute;
+  top: 1%;
+  left: 17%;
+  color: white;
+}
+
+.container {
+  top: 15%;
+  position: absolute;
+  width: 1300px;
+  height: 800px;
+}
+
+.svg-background {
+  background: #0b1528;
+}
+
+.text {
+  fill: #ffffff;
+  font-size: 24px;
+  font-weight: medium;
+  text-anchor: middle;
+}
+
+.circle {
+  fill: #b78d5f;
+}
+
+.line {
+  stroke: #b78d5f;
+  stroke-dasharray: 3.5;
+}
+
+.plane {
+  fill: #be9363;
+}

@@ -1,5 +1,4 @@
-
-import SearchComponent from './SearchComponent'
+import SearchComponent from "./SearchComponent";
 import "./Airport.css";
 
 const DestinationSelector = () => {
@@ -19,8 +18,7 @@ const DestinationSelector = () => {
             <button>LONDON</button>
           </div>
         </div>
-        <SearchComponent/>
-       
+        <SearchComponent />
       </div>
     </section>
   );

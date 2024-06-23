@@ -1,9 +1,7 @@
-
-
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import "./Auth.css";
+
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -26,15 +24,19 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("https://nirin.venetsbank.ru:8443", formData, {
-        headers: {
-          'Custom-Header': 'Value',
-          // 'Content-Type': 'application/json',
-          // 'X-Custom-Header': 'your-custom-value'
+      const response = await axios.post(
+        "https://nirin.venetsbank.ru:8443",
+        formData,
+        {
+          headers: {
+            "Custom-Header": "Value",
+            // 'Content-Type': 'application/json',
+            // 'X-Custom-Header': 'your-custom-value'
+          },
         }
-      });
+      );
       console.log("Удачно:", response.data);
-      navigate("/#login"); 
+      navigate("/#login");
     } catch (error) {
       console.error("Ошибка:", error);
       setSubmitError("Неудачно.");
@@ -94,7 +96,9 @@ const Register = () => {
 
         {submitError && <p>{submitError}</p>}
 
-        <button type="submit" className="button">Register</button>
+        <button type="submit" className="button">
+          Register
+        </button>
       </form>
     </div>
   );

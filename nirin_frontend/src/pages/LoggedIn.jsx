@@ -1,5 +1,3 @@
-
-
 const LoggedIn = () => {
   return (
     <div>

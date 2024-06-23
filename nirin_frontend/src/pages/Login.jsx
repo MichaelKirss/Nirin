@@ -1,8 +1,7 @@
-
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 import axios from "axios";
-import "./Auth.css"
+
 
 const Login = () => {
   const navigate = useNavigate();
@@ -39,7 +38,7 @@ const Login = () => {
 
       localStorage.setItem("identifier", formData.identifier);
       localStorage.setItem("password", formData.password);
-      navigate('/#loggedin');
+      navigate("/#loggedin");
     } catch (error) {
       console.error("Ошибка", error);
       setSubmitError("Не удалось");
@@ -76,7 +75,9 @@ const Login = () => {
 
         {submitError && <p>{submitError}</p>}
 
-        <button type="submit" className="button">Login</button>
+        <button type="submit" className="button">
+          Login
+        </button>
       </form>
     </div>
   );

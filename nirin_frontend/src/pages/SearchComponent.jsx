@@ -1,8 +1,10 @@
-import  { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import Modal from "react-modal";
 import "./Airport.css";
+// "https://45.131.41.66:8443/api/v1/airports/search"
+//  "https://45.131.41.66:8443/api/v1/airports/services"
 
 Modal.setAppElement("#root");
 
@@ -73,14 +75,15 @@ const SearchComponent = () => {
   return (
     <div>
       <form onSubmit={handleSearch}>
-        <div className="input-wrapper">
+        <div className="search__input-wrapper">
           <input
             type="text"
             value={query}
             onChange={handleInputChange}
             placeholder="Enter your airport"
+            className="search__input-text"
           />
-          <button className="btn-icon" type="submit">
+          <button className="search__btn-icon" type="submit">
             <svg
               width="42"
               height="46"
@@ -109,16 +112,16 @@ const SearchComponent = () => {
         className="ReactModal__Content"
         overlayClassName="ReactModal__Overlay"
       >
-        <button onClick={closeModal} className="close-button">
+        <button onClick={closeModal} className="search__close-button">
           ×
         </button>
         {searchResult ? (
-          <div className="result-container">
-            <p className="result-title">
+          <div className="search__result-container">
+            <p className="search__search__result-title">
               {searchResult.title} ({searchResult.code_iata}/
               {searchResult.code_icao})
             </p>
-            <p className="result-location">
+            <p className="search__result-location">
               {searchResult.city}, {searchResult.country}
             </p>
 
@@ -130,7 +133,7 @@ const SearchComponent = () => {
                 >
                   services vary by location
                 </button>
-                <p className="result-description">
+                <p className="search__result-description">
                   We offer personalised travel assistance to ensure your comfort
                   and safety during your holiday. Our professional guides and
                   assistants are ready to provide you with full support
@@ -139,12 +142,10 @@ const SearchComponent = () => {
               </>
             )}
             {!showServices && services.length > 0 && (
-              
               <div className="services-wrapper">
                 {services.map((service) => (
                   <div key={service.id} className="service-item">
-                    <Link 
-                      to={`/servicesorder`} className="service-link">
+                    <Link to={`/servicesorder`} className="service-link">
                       {service.kind_service}
                     </Link>
                     <svg

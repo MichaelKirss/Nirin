@@ -1,5 +1,5 @@
 from __future__ import annotations
-
+from user.models import User
 from django.db import models
 from airports import enums
 
@@ -32,3 +32,24 @@ class Services(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Cart(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
+    service = models.ManyToManyField(Services, through='CartItem', verbose_name='Сервисы в корзине')
+    total_price = models.IntegerField(default=0, null=True, blank=True)
+
+    class Meta:
+        verbose_name = 'Корзина'
+        verbose_name_plural = 'Корзины'
+
+
+class CartItem(models.Model):
+    cart = models.ForeignKey(Cart, on_delete=models.CASCADE)
+    service = models.ForeignKey(Services, on_delete=models.CASCADE)
+    quantity = models.PositiveSmallIntegerField(default=1)
+
+    class Meta:
+        verbose_name = 'Сервисы в корзине в корзине'
+        verbose_name_plural = 'Сервисы в корзине'
+        unique_together = ('cart', 'service',)

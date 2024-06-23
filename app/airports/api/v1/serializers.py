@@ -3,7 +3,7 @@ from __future__ import annotations
 from rest_framework import serializers
 from rest_framework.serializers import ModelSerializer
 
-from airports.models import Airport, Services
+from airports.models import Airport, Services, Cart, CartItem
 
 from airports.models import Services
 
@@ -39,3 +39,11 @@ class AirportDetailSerializer(serializers.ModelSerializer):
     def get_services(self, obj):
         services = Services.objects.filter(airport=obj)
         return ServicesSerializer(services, many=True).data
+
+
+class CartItemSerializer(serializers.ModelSerializer):
+    service_id = serializers.IntegerField()
+
+    class Meta:
+        model = CartItem
+        fields = ['id', 'service_id']

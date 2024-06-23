@@ -1,5 +1,5 @@
 import "./Home.css";
-import Services from "./Services";
+import Services from "./services/Services";
 import Homepage from "./Homepage";
 import Airport from "./Airport";
 import Footer from "../components/Footer";

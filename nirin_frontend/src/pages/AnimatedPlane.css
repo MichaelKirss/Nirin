@@ -15,7 +15,7 @@
   font-weight: bold;
   position: absolute;
   top: 1%;
-  left: 17%;
+  left: 18%;
   color: white;
 }
 
@@ -33,7 +33,7 @@
 .text {
   fill: #ffffff;
   font-size: 24px;
-  font-weight: medium;
+  font-weight:normal;
   text-anchor: middle;
 }
 

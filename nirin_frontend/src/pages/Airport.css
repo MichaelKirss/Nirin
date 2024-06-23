@@ -1,7 +1,7 @@
 .destination-selector {
   position: relative;
   width: 100%;
-  height: 1058px;
+  height: 100vh;
 }
 
 .destination-background-image {
@@ -13,7 +13,7 @@
   background-image: url("../images/hannah-busing-0V6DmTuJaIk-unsplash.png");
   background-size: cover;
   background-position: top;
-  filter: brightness(1.2);
+  /* filter: brightness(1.2); */
 }
 
 .destination-content {
@@ -28,12 +28,13 @@
 }
 
 .destination-title {
+  font-family: "Cormorant", serif;
+  font-size: 54px;
+  font-weight: bold;
   position: absolute;
   top: 9.2%;
   left: 5.625%;
   margin: 0;
-  font-size: 54px;
-  font-weight: bold;
   color: #000000;
 }
 
@@ -87,15 +88,14 @@
   height: 5%;
   text-align: center;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.76); 
+  background-color: rgba(255, 255, 255, 0.76);
   display: flex;
   align-items: center;
   justify-content: start;
-  /* padding: 0 10px;  */
 }
 
 input[type="text"] {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: medium;
   font-size: 24px;
   width: calc(100% - 42px - 20px);
@@ -108,13 +108,164 @@ input[type="text"] {
 }
 
 .btn-icon {
-  width: 59px;
-  height: 51px;
+  width: 60px;
+  height: 100%;
   padding: 0;
   margin: 0;
   border: none;
   background: none;
   cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.76); 
+  background-color: rgba(255, 255, 255, 0.76);
   border-radius: 0 10px 10px 0;
+}
+
+.close-button {
+  float: right;
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #b78d5f;
+  align-self: end;
+}
+
+.services-button {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: white;
+  border: none;
+  color: #0b1528;
+}
+
+.service-link {
+  display: inline-block;
+  font-family: "Cormorant", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: #b78d5f;
+  text-decoration: none;
+  position: relative;
+  margin-bottom: 33px;
+}
+.service-link::after {
+  content: "";
+  display: block;
+  width: 100%; /* Занимает всю ширину ссылки */
+  height: 1px;
+  background-color: #b78d5f;
+  position: absolute;
+  bottom: -10px; /* Расстояние от текста ссылки до линии */
+  left: 0;
+  z-index: -1;
+}
+
+.services-wrapper {
+  width: 428px;
+  height: 262px;
+  border-radius: 17.71px;
+  padding-left: 20px;
+  background-color: rgba(217, 217, 217, 0.12);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 20px;
+}
+.service-item {
+  position: relative;
+}
+
+.line-svg {
+  position: absolute;
+  top: calc(100% + -30px); /* Расстояние между линией и текстом ссылки */
+  left: 0;
+}
+
+
+.ReactModal__Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 1000; /* Ensures the modal is above other elements */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ReactModal__Content {
+  width: 554px;
+  height: 815px;
+  background: #0b1528;
+  border: none;
+  outline: none;
+  overflow: auto;
+  color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.result-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  text-align: center;
+  margin: 60px 37px 195px 63px;
+}
+
+.result-title {
+  font-family: "Cormorant", sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+  text-transform: uppercase;
+  color: #b78d5f;
+  margin-top: 0;
+  margin-bottom: 10px;
+  justify-self: start;
+}
+
+.result-location {
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #b78d5f;
+  margin-top: 0;
+  margin-bottom: 150px;
+}
+
+.result-description {
+  width: 336px;
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  margin: 0;
+}
+
+.search__services-button {
+  display: block;
+  width: 425px;
+  padding: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #b78d5f;
+  border: none;
+  color: #ffffff;
+  text-transform: lowercase;
+  margin-bottom: 141px;
+}
+
+.search__services-button:hover {
+  background-color: #9a774d;
 }

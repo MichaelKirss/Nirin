@@ -1,19 +1,30 @@
 import { useState } from "react";
 import Modal from "react-modal";
-import { Link } from "react-router-dom";
+import { useModal } from "../../components/LoginModal";
 import "./services.css";
 
 function ServicesOrder() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [modalImage, setModalImage] = useState("");
+  const { openLoginModal, closeAllModals } = useModal();
+
 
   const openModal = (imageUrl) => {
-    setModalImage(imageUrl);
+    const imagePath = `${import.meta.env.BASE_URL}${imageUrl.replace(
+      /^\//,
+      ""
+    )}`;
+    setModalImage(imagePath);
     setModalIsOpen(true);
   };
 
   const closeModal = () => {
     setModalIsOpen(false);
+  };
+
+ const handleOpenLoginModal = () => {
+    closeAllModals(); // Закрываем все открытые модальные окна
+    openLoginModal('login'); // Открываем модальное окно для входа
   };
 
   return (
@@ -26,7 +37,10 @@ function ServicesOrder() {
               className="services__overlay"
               style={{ bottom: "0", right: "0" }}
             >
-              <p className="services__overlay-paragraph" style={{ marginLeft: "6%" }}>
+              <p
+                className="services__overlay-paragraph"
+                style={{ marginLeft: "6%" }}
+              >
                 Our accompanying guides possess the necessary knowledge and
                 experience to make your journey unforgettable and worry-free. We
                 guarantee a personalized approach to each client and strive to
@@ -37,7 +51,7 @@ function ServicesOrder() {
           </div>
           <button
             className="servicesorder-button1"
-            onClick={() => openModal("./src/images/Rectangle_2.png")}
+            onClick={() => openModal("images/womanwithbag.png")}
           >
             <svg
               width="22"
@@ -56,7 +70,7 @@ function ServicesOrder() {
         <div className="services__wrapper">
           <div className="services__photo services__photo2">
             <div className="services__overlay">
-              <p className="services__overlay-paragraph"> 
+              <p className="services__overlay-paragraph">
                 Our goal is to make your journey unique, comfortable, and
                 carefree. We aim to create a personalized experience for each
                 client, regardless of their age, providing the highest level of
@@ -67,7 +81,7 @@ function ServicesOrder() {
           </div>
           <button
             className="servicesorder-button2"
-            onClick={() => openModal("./src/images/Rectangle_3.png")}
+            onClick={() => openModal("images/boy.png")}
           >
             <svg
               width="22"
@@ -96,7 +110,7 @@ function ServicesOrder() {
           </div>
           <button
             className="servicesorder-button3"
-            onClick={() => openModal("./src/images/Rectangle_1.png")}
+            onClick={() => openModal("images/womanincar.png")}
           >
             <svg
               width="22"
@@ -143,9 +157,9 @@ function ServicesOrder() {
               </div>
             </div>
           </div>
-          <Link to="/login" className="button-my-orders">
+          <button className="button-my-orders" onClick={handleOpenLoginModal}>
             MY ORDERS
-          </Link>
+          </button>
         </div>
         <button
           onClick={closeModal}

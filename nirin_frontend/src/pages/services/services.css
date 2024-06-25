@@ -174,7 +174,7 @@
 }
 
 .services__wrapper:hover .servicesorder-button1 {
-  width: calc(95%);
+  width: calc(100%);
 }
 .services__wrapper:hover .servicesorder-button2 {
   width: calc(100%);
@@ -226,7 +226,7 @@
 }
 
 .services__photo1 {
-  background-image: url("../../images/Rectangle_2.png");
+  background-image: url("../../images/Rectangle_45.png");
   margin-right: 10%;
 }
 
@@ -253,7 +253,8 @@
 
 .servicesorders__modal {
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.7);
+  /* background-color: rgba(0, 0, 0, 0.1); */
+  background-color: #0b1528;
   width: 637px;
   height: 637px;
   border-radius: 8px;
@@ -262,6 +263,7 @@
   justify-content: center;
   align-items: center;
   outline: none;
+ 
 }
 
 .servicesorders__modal-content {
@@ -292,6 +294,7 @@
   align-items: center;
   color: white;
   text-align: center;
+  
 }
 
 .services__overlay_modal p {
@@ -309,6 +312,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+ 
 }
 
 .services__overlay_content {

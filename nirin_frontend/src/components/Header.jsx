@@ -1,7 +1,15 @@
-import { HashLink} from "react-router-hash-link";
-import './header.css'
+import { HashLink } from "react-router-hash-link";
+import Modal from "react-modal";
+import { useModal } from "./LoginModal";
+import "./header.css";
 
 function Header() {
+  const { openLoginModal, closeAllModals, isModalOpen } = useModal();
+  const handleOpenLoginModal = () => {
+    closeAllModals(); 
+    openLoginModal("login"); 
+  };
+
   return (
     <header className="App-header">
       <div className="logo">
@@ -10,7 +18,9 @@ function Header() {
       <nav>
         <ul className="nav-links">
           <li>
-            <HashLink smooth to="/#home" className="a">HOME</HashLink>
+            <HashLink smooth to="/#home" className="a">
+              HOME
+            </HashLink>
           </li>
 
           <li>
@@ -23,12 +33,12 @@ function Header() {
             <HashLink smooth to="/#services">
               SERVICES
             </HashLink>
-          </li>          
+          </li>
           <li>
             <HashLink smooth to="/#contacts">
               CONTACTS
             </HashLink>
-          </li>          
+          </li>
         </ul>
       </nav>
       <div className="language-dropdown">
@@ -40,14 +50,21 @@ function Header() {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="M1 1L8 9L16 1" stroke="black" strokeLinecap="round" fill="#b78d5f" />
+          <path
+            d="M1 1L8 9L16 1"
+            stroke="black"
+            strokeLinecap="round"
+            fill="#b78d5f"
+          />
         </svg>
         <select>
-            <option value="en">EN</option>
-            <option value="ru">RU</option>
-          </select> 
+          <option value="en">EN</option>
+          <option value="ru">RU</option>
+        </select>
       </div>
-      <button className="sign-in-button">SIGN IN / JOIN NOW</button>
+      <button className="sign-in-button" onClick={handleOpenLoginModal}>
+        SIGN IN / JOIN NOW
+      </button>
     </header>
   );
 }

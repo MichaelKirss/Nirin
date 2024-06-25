@@ -1,0 +1,105 @@
+  
+
+ .greetings-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  background-color: #0B1528;   
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 30%;
+  height: 100%;
+}
+
+.username {
+  font-size: 2.4vw;
+  font-weight: bold;
+  margin-top: 47px;
+  margin-bottom: 120px;
+  font-family: Montserrat;
+  font-weight: 600; 
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.menu-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-list li {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 50px; 
+  /* padding-left: 40px;  */
+}
+
+.menu-list li .orange-circle {
+  width: 50px; 
+  height: 50px; 
+  background-color: #b78d5f;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px; 
+}
+
+.menu-list li .menu-icon {
+  width: 26px;
+  height: 26px; 
+}
+.menu-list li span {
+  font-family: Montserrat;
+  font-weight: 500; 
+  font-size: 14px;
+  color: #FFF;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+}
+
+.greeting-photo {
+  align-self: center;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.welcome-text {
+  font-size: 1.8vw;
+  color: #ffffff;
+  font-family: Cormorant, serif;
+  font-weight: bold;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.user-photo {
+  width: 33vw; 
+  height: 40vw;
+  background-image: url("../../images/man.png"); 
+  background-size: cover;
+  background-position: center;
+}
+
+.selected-item-details {
+  font-size: 1.6vw;
+  margin-top: 1vw;
+}
+ 

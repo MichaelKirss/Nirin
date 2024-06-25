@@ -5,6 +5,8 @@ import Modal from "react-modal";
 import "./Airport.css";
 // "https://45.131.41.66:8443/api/v1/airports/search"
 //  "https://45.131.41.66:8443/api/v1/airports/services"
+// https://nirin.venetsbank.ru:8443/api/v1/airports/search?search=
+// "https://nirin.venetsbank.ru:8443/api/v1/airports/services"
 
 Modal.setAppElement("#root");
 
@@ -24,7 +26,7 @@ const SearchComponent = () => {
     e.preventDefault();
     try {
       const response = await axios.get(
-        "https://45.131.41.66:8443/api/v1/airports/search",
+        'http://nirin.venetsbank.ru:8443/api/v1/airports/search?search=',
         {
           params: { q: query },
         }
@@ -57,7 +59,7 @@ const SearchComponent = () => {
     setShowServices(false);
     try {
       const response = await axios.get(
-        "https://45.131.41.66:8443/api/v1/airports/services"
+        "https://nirin.venetsbank.ru:8443/api/v1/airports/services"
       );
       console.log(response.data);
       setServices(response.data.results);
@@ -109,15 +111,15 @@ const SearchComponent = () => {
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         contentLabel="Результат поиска"
-        className="ReactModal__Content"
-        overlayClassName="ReactModal__Overlay"
+        className="search__Content"
+        overlayClassName="search__Overlay"
       >
         <button onClick={closeModal} className="search__close-button">
           ×
         </button>
         {searchResult ? (
           <div className="search__result-container">
-            <p className="search__search__result-title">
+            <p className="search__result-title">
               {searchResult.title} ({searchResult.code_iata}/
               {searchResult.code_icao})
             </p>

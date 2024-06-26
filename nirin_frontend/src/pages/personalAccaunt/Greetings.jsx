@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { HashLink } from "react-router-hash-link";
+import Chat from "./Chat"
 import Modal from "react-modal";
 import "./Greetings.css";
 
@@ -176,7 +177,9 @@ const Greetings = () => {
   };
 
   return (
+    
     <div className="greetings-container">
+      <Chat/>
       <div className="user-info">
         <div className="username">Aleksandr Kochal</div>
         <ul className="menu-list">
@@ -194,6 +197,7 @@ const Greetings = () => {
         <a href="/" className="home-link">
           Home
         </a>
+        
       </div>
       <div className="content">
         <div className="greeting-photo">

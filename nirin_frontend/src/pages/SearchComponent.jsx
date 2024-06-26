@@ -5,8 +5,8 @@ import Modal from "react-modal";
 import "./Airport.css";
 // "https://45.131.41.66:8443/api/v1/airports/search"
 //  "https://45.131.41.66:8443/api/v1/airports/services"
-// http://nirin.venetsbank.ru:8443/api/v1/airports/search?search=
-// "http://nirin.venetsbank.ru:8443/api/v1/airports/services"
+// https://nirin.venetsbank.ru:8443/api/v1/airports/search?search=
+// "https://nirin.venetsbank.ru:8443/api/v1/airports/services"
 
 Modal.setAppElement("#root");
 
@@ -26,7 +26,7 @@ const SearchComponent = () => {
     e.preventDefault();
     try {
       const response = await axios.get(
-        "http://nirin.venetsbank.ru:8443/api/v1/airports/search?search=",
+        "https://45.131.41.66:8443/api/v1/airports/search",
         {
           params: { q: query },
         }
@@ -59,7 +59,7 @@ const SearchComponent = () => {
     setShowServices(false);
     try {
       const response = await axios.get(
-        "http://nirin.venetsbank.ru:8443/api/v1/airports/services"
+        "https://45.131.41.66:8443/api/v1/airports/services"
       );
       console.log(response.data);
       setServices(response.data.results);

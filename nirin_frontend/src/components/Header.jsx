@@ -13,7 +13,7 @@ function Header() {
   return (
     <header className="App-header">
       <div className="logo">
-        <h1>MEET AND GREET</h1>
+        <h2>MEET AND GREET</h2>
       </div>
       <nav>
         <ul className="nav-links">

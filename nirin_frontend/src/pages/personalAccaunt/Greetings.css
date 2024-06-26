@@ -1,4 +1,4 @@
-.greetings-container {
+ .greetings-container {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -286,7 +286,7 @@
 
 .transaction__close-button {
   background: none;
-  /* border: none; */
+ 
   color: #aaa;
   font-size: 24px;
   cursor: pointer;
@@ -477,6 +477,7 @@
   font-family: "Cormorant";
   font-weight: bold;
   font-size: 18px;
+  cursor: pointer;
 }
 
 .form__save-button{
@@ -489,4 +490,6 @@
   font-family: "Cormorant";
   font-weight: bold;
   font-size: 18px;
-}
+  cursor: pointer; 
+} 
+

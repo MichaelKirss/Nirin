@@ -397,13 +397,14 @@ const Greetings = () => {
                   <div className="form-row">
                     <div className="form-group">
                       <label></label>
-                      <input type="text" value="FIRST NAME" />
+                      <input type="text" placeholder="FIRST NAME" />
                     </div>
                     <div className="form-group">
                       <label></label>
                       <input
                         type="text"
-                        value="LASTNAME"
+                        // value="LASTNAME"
+                        placeholder="LASTNAME"
                         style={{ marginLeft: "67px" }}
                       />
                     </div>
@@ -412,13 +413,13 @@ const Greetings = () => {
                   <div className="form-row">
                     <div className="form-group">
                       <label></label>
-                      <input type="text" value="PHONE" />
+                      <input type="text" placeholder="PHONE" />
                     </div>
                     <div className="form-group">
                       <label></label>
                       <input
                         type="email"
-                        value="EMAIL"
+                        placeholder="EMAIL"
                         style={{ marginLeft: "67px" }}
                       />
                     </div>

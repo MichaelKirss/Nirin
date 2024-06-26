@@ -63,7 +63,7 @@ function Header() {
         </select>
       </div>
       <button className="sign-in-button" onClick={handleOpenLoginModal}>
-        SIGN IN / JOIN NOW
+        LOG IN
       </button>
     </header>
   );

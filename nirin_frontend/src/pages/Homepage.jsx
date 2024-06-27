@@ -2,6 +2,8 @@ import "./Homepage.css";
 import Header from "../components/Header";
 function Homepage() {
   return (
+    <>
+    {/* <Header/> */}
     <div className="home" id="homepage">
       <Header />
       <div className="homepage__overlay">
@@ -17,6 +19,7 @@ function Homepage() {
       <div className="homepage__overlay3"></div>
       <div className="homepage__overlay4"></div>
     </div>
+    </>
   );
 }
 export default Homepage;

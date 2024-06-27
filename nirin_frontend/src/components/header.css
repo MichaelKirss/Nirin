@@ -1,16 +1,7 @@
-
- .App-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
+/* .App-header {
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   background-color: rgba(0, 0, 0, 0); 
   position: fixed; 
   top: 0; 
@@ -25,14 +16,8 @@ nav ul{
   list-style-type: none;
   padding: 0;
   margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
- -ms-flex-wrap: wrap;
-     flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   min-width: 600px;
   margin-left: 15px;
 }
@@ -47,18 +32,13 @@ nav ul{
 }
 
 .logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-   margin-left: 5.857vw;
- /* margin-right: 6.571vw;  */
-} 
-  
+  align-items: center;
+  margin-left: 5.857vw;
+  margin-right: 6.571vw; 
+}
 
-.logo h2 {
+.logo h1 {
   font-family: "Cormorant", serif;
   font-weight: bold;
   font-size: 32px;
@@ -70,14 +50,8 @@ nav ul{
 
 .language-dropdown {
   
-  display: -webkit-box;
-  
-  display: -ms-flexbox;
-  
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; 
+  align-items: center; 
   margin-right:1.69%; 
   color: white;
   cursor: pointer;
@@ -108,9 +82,112 @@ nav ul{
   border-radius: 10px;
   cursor: pointer;
   text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
+  margin-right: 5.857%;
+  width: 16.57%;
+  max-width: 300px;
+  height: 54.76%;
+ ;
+}
+
+.sign-in-button:hover {
+  background-color: white;
+  color: black;
+}
+ */
+/*   */
+
+ 
+ .App-header {
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0); 
+  position: fixed; 
+  top: 0; 
+  left: 0;
+  right: 0;
+  height: 8.63vh; 
+  z-index: 1000; 
+  width: 100%; 
+}
+
+nav ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+ flex-wrap: wrap;
+  justify-content: space-between;
+  min-width: 600px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.nav-links  a  {
+  font-family: "Cormorant", serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  line-height: 140%;
+  text-decoration: none;
+  margin-left: 3rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+   margin-left: 5.857vw;
+ /* margin-right: 6.571vw;  */
+} 
+  
+
+.logo h2 {
+  font-family: "Cormorant", serif;
+  font-weight: bold;
+  font-size: 32px;
+  color: #0b1528;
+}
+
+
+
+
+.language-dropdown {
+  
+  display: flex;
+  align-items: center; 
+  margin-right:1.69%; 
+  color: white;
+  cursor: pointer;
+}
+
+.language-dropdown select {
+  font-family: "Cormorant", serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: #b78d5f;
+  background: transparent;
+  border: none;
+  width: 2.5vw;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.sign-in-button {
+  font-family: "Cormorant", serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: #ffffff;
+  line-height: 140%;
+  background-color: #b78d5f;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  justify-content: center;
   margin-right: 5.857%;
   width: 16.57%;
   max-width: 300px;

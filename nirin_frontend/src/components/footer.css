@@ -1,17 +1,11 @@
 .footer {
-  width: 103%;
+  width: 100vw;
   background-color: #b78d5f;
   color: #ffffff;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; 
-  -webkit-box-sizing: border-box; 
-          box-sizing: border-box;  
+  justify-content: space-around;
+  align-items: center; 
+  box-sizing: border-box;  
 }
 
 .footer-contacts {
@@ -71,6 +65,3 @@
 .footer-legal .legal-links li {
   margin-bottom: 5px;
 }
-
- 
- 

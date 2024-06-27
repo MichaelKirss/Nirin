@@ -1,10 +1,10 @@
- .greetings-container {
+.greetings-container {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   width: 100vw;
   height: 100vh;
-  padding: 20px;
+  /* padding: 20px; */
   background-color: #0b1528;
 }
 
@@ -13,7 +13,7 @@
   flex-direction: column;
   align-items: center;
   width: 30%;
-  height: 100%;
+  height: 100vh;
 }
 
 .username {
@@ -83,7 +83,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
+ 
 }
 
 .greeting-photo {
@@ -102,7 +102,7 @@
 
 .user-photo {
   width: 30vw;
-  height: 35vw;
+  height: 55vh;
   background-image: url("../../images/man.png");
   background-size: cover;
   background-position: center;
@@ -286,7 +286,7 @@
 
 .transaction__close-button {
   background: none;
- 
+  /* border: none; */
   color: #aaa;
   font-size: 24px;
   cursor: pointer;
@@ -477,7 +477,6 @@
   font-family: "Cormorant";
   font-weight: bold;
   font-size: 18px;
-  cursor: pointer;
 }
 
 .form__save-button{
@@ -490,6 +489,4 @@
   font-family: "Cormorant";
   font-weight: bold;
   font-size: 18px;
-  cursor: pointer; 
-} 
-
+}
